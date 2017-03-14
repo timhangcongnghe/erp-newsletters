@@ -1,8 +1,18 @@
 vi:
+  layouts:
+    erp:
+      backend:
+        sidebar:
+          newsletter: "Đăng ký nhận tin"
+          newsletters: "Danh sách đăng ký"
   erp:
     newsletters:
       backend:
         newsletters:
+          delete_all:
+            success: "Xóa email đăng ký nhận tin thành công"
+          destroy:
+            success: "Xóa email đăng ký nhận tin thành công"
           index:
             newsletters: "Danh sách đăng ký nhận tin"
             delete: "Xóa email đăng ký"
