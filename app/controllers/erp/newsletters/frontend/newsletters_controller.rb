@@ -6,9 +6,15 @@ module Erp
           @newsletter = Erp::Newsletters::Newsletter.new(newsletter_params)
   
           if @newsletter.save
-            redirect_to :back, flash: { success: 'Cảm ơn bạn đã đăng ký nhận bản tin.' }
+            render json: {
+              status: 'success',
+              message: 'Cảm ơn bạn đã đăng ký nhận bản tin.'
+            }
           else
-            redirect_to :back, flash: { warning: 'Email này đã được đăng ký hoặc nhập sai định dạng.'}
+            render json: {
+              status: 'warning',
+              message: 'Email này đã được đăng ký hoặc nhập sai định dạng.'
+            }
           end
         end
         
