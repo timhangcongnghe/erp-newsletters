@@ -11,7 +11,7 @@ module Erp
     
         # GET /newsletters
         def list
-          @newsletters = Newsletter.search(params).paginate(:page => params[:page], :per_page => 10)
+          @newsletters = Newsletter.search(params).paginate(:page => params[:page], :per_page => 50)
           
           render layout: nil
         end
